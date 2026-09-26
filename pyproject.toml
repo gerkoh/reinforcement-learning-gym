@@ -1,0 +1,38 @@
+[project]
+name = "reinforcement-learning-gym"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "ale-py>=0.12.1",
+    "gymnasium[atari,classic-control]>=1.3.0",
+    "matplotlib>=3.11.1",
+    "numpy>=2.5.2",
+    "torch>=2.13.0",
+    "torchvision>=0.28.0",
+    "tqdm>=4.70.0",
+]
+
+# ==============================================================================
+# Ruff
+# ==============================================================================
+[tool.ruff]
+line-length = 88
+indent-width = 4
+target-version = "py314"
+
+[tool.ruff.lint]
+extend-select = [
+    "B",  # flake8-bugbear
+    "I",  # isort
+    "UP", # pyupgrade
+]
+fixable = ["ALL"]
+unfixable = []
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+skip-magic-trailing-comma = false
+line-ending = "auto"
